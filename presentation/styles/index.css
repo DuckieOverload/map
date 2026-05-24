@@ -1,0 +1,84 @@
+/* ── Hide Slidev goto dialog autocomplete overlay ─────────────────── */
+#slidev-goto-dialog { display: none !important; }
+
+/* ── Sophon theme — global typography (white slides) ─────────────── */
+
+.slidev-layout h1 {
+  color: #182B49;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: Merriweather, serif;
+  line-height: 1.2;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin: 0 0 0.4rem;
+}
+.slidev-layout h2 {
+  color: #333;
+  font-size: 1.05rem;
+  font-weight: 300;
+  font-family: Merriweather, serif;
+  font-style: italic;
+  line-height: 1.4;
+  max-width: 70%;
+  margin: 0.4rem 0 0.7rem;
+  border: none !important;
+  padding: 0;
+}
+.slidev-layout h3 {
+  color: #182B49;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: Merriweather, serif;
+  margin: 0 0 0.35rem;
+}
+.slidev-layout h3:not(:first-child) {
+  margin-top: 0.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(0,0,0,0.09);
+}
+.slidev-layout p {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.7;
+  margin: 0 0 0.4rem;
+}
+.slidev-layout ul, .slidev-layout ol {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 2;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+.slidev-layout li { margin: 0; }
+
+/* blockquote → gold callout bar */
+.slidev-layout blockquote {
+  background: #FDF8EC;
+  border-left: 3px solid #C69214;
+  border-radius: 0 4px 4px 0;
+  padding: 0.5rem 0.85rem;
+  margin: 0.6rem 0 0;
+  font-style: normal;
+}
+.slidev-layout blockquote p { font-size: 0.71rem; margin: 0; }
+
+/* small → footnote/caption */
+.slidev-layout small {
+  font-size: 0.6rem;
+  color: #888;
+  display: block;
+  margin-top: 0.35rem;
+  line-height: 1.5;
+}
+
+/* ── column card colours — applied via leftClass/rightClass props ── */
+.col-red   { background: #FFEBEE; border-radius: 8px; padding: 0.9rem; }
+.col-green { background: #E8F5E9; border-radius: 8px; padding: 0.9rem; }
+.col-blue  { background: #E3F2FD; border-radius: 8px; padding: 0.9rem; }
+.col-gray  { background: #F5F7FA; border-radius: 8px; padding: 0.9rem; }
+.col-lgray { background: #F0F7FB; border-radius: 8px; padding: 0.9rem; }
+
+.col-red   h3 { color: #C62828; }
+.col-green h3 { color: #2E7D32; }
+.col-blue  h3 { color: #1565C0; }

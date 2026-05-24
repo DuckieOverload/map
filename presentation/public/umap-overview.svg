@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 320" width="850" height="320">
+  <style>
+    @keyframes cluster { 0%,10% { transform: var(--from); opacity:0.7; } 60%,100% { transform: translate(0,0); opacity:1; } }
+    .anim { animation: cluster 3s ease-in-out 1s both; }
+  </style>
+
+  <!-- Left panel: Pretrained (static) -->
+  <rect x="15" y="10" width="390" height="280" rx="10" fill="#FAFAFA" stroke="#ddd" stroke-width="1.5"/>
+  <text x="210" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#182B49" font-family="Arial">Pretrained (Before Fine-Tuning)</text>
+  <text x="210" y="58" text-anchor="middle" font-size="11" fill="#555" font-family="Arial">Silhouette: 0.077</text>
+  <circle cx="120" cy="150" r="5" fill="#9E9E9E" opacity="0.7"/><circle cx="140" cy="165" r="5" fill="#9E9E9E" opacity="0.7"/>
+  <circle cx="108" cy="172" r="5" fill="#9E9E9E" opacity="0.7"/><circle cx="155" cy="148" r="5" fill="#9E9E9E" opacity="0.7"/>
+  <circle cx="130" cy="180" r="5" fill="#9E9E9E" opacity="0.7"/><circle cx="148" cy="158" r="5" fill="#9E9E9E" opacity="0.7"/>
+  <circle cx="200" cy="110" r="5" fill="#D32F2F" opacity="0.7"/><circle cx="220" cy="128" r="5" fill="#D32F2F" opacity="0.7"/>
+  <circle cx="190" cy="132" r="5" fill="#D32F2F" opacity="0.7"/><circle cx="230" cy="115" r="5" fill="#D32F2F" opacity="0.7"/>
+  <circle cx="212" cy="100" r="5" fill="#D32F2F" opacity="0.7"/>
+  <circle cx="280" cy="195" r="5" fill="#1565C0" opacity="0.7"/><circle cx="300" cy="210" r="5" fill="#1565C0" opacity="0.7"/>
+  <circle cx="268" cy="215" r="5" fill="#1565C0" opacity="0.7"/><circle cx="310" cy="190" r="5" fill="#1565C0" opacity="0.7"/>
+  <circle cx="290" cy="225" r="5" fill="#1565C0" opacity="0.7"/>
+  <circle cx="170" cy="225" r="5" fill="#388E3C" opacity="0.7"/><circle cx="188" cy="240" r="5" fill="#388E3C" opacity="0.7"/>
+  <circle cx="158" cy="245" r="5" fill="#388E3C" opacity="0.7"/><circle cx="195" cy="228" r="5" fill="#388E3C" opacity="0.7"/>
+  <circle cx="240" cy="160" r="5" fill="#7B1FA2" opacity="0.7"/><circle cx="178" cy="195" r="5" fill="#7B1FA2" opacity="0.7"/>
+  <circle cx="258" cy="140" r="5" fill="#7B1FA2" opacity="0.7"/><circle cx="155" cy="142" r="5" fill="#7B1FA2" opacity="0.7"/>
+  <circle cx="330" cy="140" r="5" fill="#FF6F00" opacity="0.7"/><circle cx="345" cy="250" r="5" fill="#FF6F00" opacity="0.7"/>
+  <circle cx="100" cy="250" r="5" fill="#FF6F00" opacity="0.7"/>
+
+  <!-- Right panel: After Fine-Tuning (animated from scattered → clustered) -->
+  <rect x="445" y="10" width="390" height="280" rx="10" fill="#FAFAFA" stroke="#ddd" stroke-width="1.5"/>
+  <text x="640" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#182B49" font-family="Arial">After Fine-Tuning</text>
+  <text x="640" y="58" text-anchor="middle" font-size="11" fill="#555" font-family="Arial">Silhouette: 0.206 (2.7x better)</text>
+
+  <!-- Gray cluster (QCD) — scattered from center, converge to top-left -->
+  <circle class="anim" style="--from:translate(40px,50px)" cx="500" cy="105" r="5" fill="#9E9E9E"/>
+  <circle class="anim" style="--from:translate(20px,40px)" cx="508" cy="112" r="5" fill="#9E9E9E"/>
+  <circle class="anim" style="--from:translate(60px,30px)" cx="495" cy="115" r="5" fill="#9E9E9E"/>
+  <circle class="anim" style="--from:translate(-10px,55px)" cx="512" cy="100" r="5" fill="#9E9E9E"/>
+  <circle class="anim" style="--from:translate(50px,20px)" cx="503" cy="118" r="5" fill="#9E9E9E"/>
+  <circle class="anim" style="--from:translate(30px,60px)" cx="515" cy="108" r="5" fill="#9E9E9E"/>
+
+  <!-- Red cluster (H-bb) — scattered from mid-area, converge to top-right -->
+  <circle class="anim" style="--from:translate(-60px,50px)" cx="720" cy="90" r="5" fill="#D32F2F"/>
+  <circle class="anim" style="--from:translate(-80px,35px)" cx="728" cy="97" r="5" fill="#D32F2F"/>
+  <circle class="anim" style="--from:translate(-50px,60px)" cx="715" cy="100" r="5" fill="#D32F2F"/>
+  <circle class="anim" style="--from:translate(-70px,25px)" cx="732" cy="85" r="5" fill="#D32F2F"/>
+  <circle class="anim" style="--from:translate(-40px,45px)" cx="723" cy="104" r="5" fill="#D32F2F"/>
+
+  <!-- Blue cluster (t-bqq) — scattered from top, converge to bottom-right -->
+  <circle class="anim" style="--from:translate(-50px,-70px)" cx="750" cy="230" r="5" fill="#1565C0"/>
+  <circle class="anim" style="--from:translate(-30px,-80px)" cx="758" cy="237" r="5" fill="#1565C0"/>
+  <circle class="anim" style="--from:translate(-60px,-55px)" cx="745" cy="240" r="5" fill="#1565C0"/>
+  <circle class="anim" style="--from:translate(-40px,-90px)" cx="762" cy="225" r="5" fill="#1565C0"/>
+  <circle class="anim" style="--from:translate(-20px,-65px)" cx="752" cy="244" r="5" fill="#1565C0"/>
+
+  <!-- Green cluster (W-qq) — scattered from right, converge to bottom-left -->
+  <circle class="anim" style="--from:translate(70px,-50px)" cx="510" cy="245" r="5" fill="#388E3C"/>
+  <circle class="anim" style="--from:translate(50px,-40px)" cx="518" cy="252" r="5" fill="#388E3C"/>
+  <circle class="anim" style="--from:translate(80px,-60px)" cx="505" cy="255" r="5" fill="#388E3C"/>
+  <circle class="anim" style="--from:translate(60px,-30px)" cx="522" cy="240" r="5" fill="#388E3C"/>
+  <circle class="anim" style="--from:translate(90px,-45px)" cx="512" cy="258" r="5" fill="#388E3C"/>
+
+  <!-- Purple cluster (Z-qq) — scattered, converge to center -->
+  <circle class="anim" style="--from:translate(-40px,-30px)" cx="630" cy="170" r="5" fill="#7B1FA2"/>
+  <circle class="anim" style="--from:translate(30px,40px)" cx="638" cy="177" r="5" fill="#7B1FA2"/>
+  <circle class="anim" style="--from:translate(-50px,20px)" cx="625" cy="180" r="5" fill="#7B1FA2"/>
+  <circle class="anim" style="--from:translate(40px,-35px)" cx="642" cy="165" r="5" fill="#7B1FA2"/>
+
+  <!-- Orange cluster (g) — scattered, converge to center-left -->
+  <circle class="anim" style="--from:translate(60px,50px)" cx="580" cy="140" r="5" fill="#FF6F00"/>
+  <circle class="anim" style="--from:translate(-40px,-60px)" cx="588" cy="147" r="5" fill="#FF6F00"/>
+  <circle class="anim" style="--from:translate(80px,-30px)" cx="575" cy="150" r="5" fill="#FF6F00"/>
+  <circle class="anim" style="--from:translate(-60px,40px)" cx="592" cy="135" r="5" fill="#FF6F00"/>
+
+  <!-- Legend -->
+  <circle cx="480" cy="305" r="5" fill="#9E9E9E"/><text x="492" y="309" font-size="10" fill="#333" font-family="Arial">QCD</text>
+  <circle cx="540" cy="305" r="5" fill="#D32F2F"/><text x="552" y="309" font-size="10" fill="#333" font-family="Arial">H-bb</text>
+  <circle cx="610" cy="305" r="5" fill="#1565C0"/><text x="622" y="309" font-size="10" fill="#333" font-family="Arial">t-bqq</text>
+  <circle cx="685" cy="305" r="5" fill="#388E3C"/><text x="697" y="309" font-size="10" fill="#333" font-family="Arial">W-qq</text>
+  <circle cx="755" cy="305" r="5" fill="#7B1FA2"/><text x="767" y="309" font-size="10" fill="#333" font-family="Arial">Z-qq</text>
+  <circle cx="815" cy="305" r="5" fill="#FF6F00"/><text x="827" y="309" font-size="10" fill="#333" font-family="Arial">g</text>
+</svg>

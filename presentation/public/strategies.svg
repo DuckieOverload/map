@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340">
+  <rect x="10" y="5" width="280" height="330" rx="10" fill="#F5F7FA" stroke="#1565C0" stroke-width="2.5"/>
+  <text x="150" y="32" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565C0" font-family="Arial">Frozen + MLP</text>
+  <rect x="35" y="48" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="150" y="65" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 1 FROZEN</text>
+  <rect x="35" y="77" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="150" y="94" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 2 FROZEN</text>
+  <rect x="35" y="106" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="150" y="123" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 3 FROZEN</text>
+  <rect x="35" y="135" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="150" y="152" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 4 FROZEN</text>
+  <rect x="35" y="164" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="150" y="181" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 5 FROZEN</text>
+  <rect x="35" y="193" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="150" y="210" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 6 FROZEN</text>
+  <rect x="35" y="222" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="150" y="239" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 7 FROZEN</text>
+  <rect x="35" y="251" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="150" y="268" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 8 FROZEN</text>
+  <rect x="75" y="288" width="150" height="26" rx="5" fill="#FF8F00" stroke="#E65100" stroke-width="2"/><text x="150" y="306" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="Arial">MLP Head (35K)</text>
+  <rect x="310" y="5" width="280" height="330" rx="10" fill="#F5F7FA" stroke="#F57C00" stroke-width="2.5"/>
+  <text x="450" y="32" text-anchor="middle" font-size="14" font-weight="bold" fill="#F57C00" font-family="Arial">Partial Fine-Tune</text>
+  <rect x="335" y="48" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="450" y="65" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 1 FROZEN</text>
+  <rect x="335" y="77" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="450" y="94" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 2 FROZEN</text>
+  <rect x="335" y="106" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="450" y="123" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 3 FROZEN</text>
+  <rect x="335" y="135" width="230" height="24" rx="5" fill="#90CAF9" stroke="#1565C0" stroke-width="1"/><text x="450" y="152" text-anchor="middle" font-size="10" fill="#1565C0" font-family="Arial">Block 4 FROZEN</text>
+  <rect x="335" y="164" width="230" height="24" rx="5" fill="#FFB74D" stroke="#E65100" stroke-width="1.5"/><text x="450" y="181" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 5 TRAINABLE</text>
+  <rect x="335" y="193" width="230" height="24" rx="5" fill="#FFB74D" stroke="#E65100" stroke-width="1.5"/><text x="450" y="210" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 6 TRAINABLE</text>
+  <rect x="335" y="222" width="230" height="24" rx="5" fill="#FFB74D" stroke="#E65100" stroke-width="1.5"/><text x="450" y="239" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 7 TRAINABLE</text>
+  <rect x="335" y="251" width="230" height="24" rx="5" fill="#FFB74D" stroke="#E65100" stroke-width="1.5"/><text x="450" y="268" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 8 TRAINABLE</text>
+  <rect x="375" y="288" width="150" height="26" rx="5" fill="#FF8F00" stroke="#E65100" stroke-width="2"/><text x="450" y="306" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="Arial">MLP Head (1.4M)</text>
+  <rect x="610" y="5" width="280" height="330" rx="10" fill="#F5F7FA" stroke="#388E3C" stroke-width="2.5"/>
+  <text x="750" y="32" text-anchor="middle" font-size="14" font-weight="bold" fill="#388E3C" font-family="Arial">Full Fine-Tune</text>
+  <rect x="635" y="48" width="230" height="24" rx="5" fill="#81C784" stroke="#2E7D32" stroke-width="1.5"/><text x="750" y="65" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 1 TRAINABLE</text>
+  <rect x="635" y="77" width="230" height="24" rx="5" fill="#81C784" stroke="#2E7D32" stroke-width="1.5"/><text x="750" y="94" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 2 TRAINABLE</text>
+  <rect x="635" y="106" width="230" height="24" rx="5" fill="#81C784" stroke="#2E7D32" stroke-width="1.5"/><text x="750" y="123" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 3 TRAINABLE</text>
+  <rect x="635" y="135" width="230" height="24" rx="5" fill="#81C784" stroke="#2E7D32" stroke-width="1.5"/><text x="750" y="152" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 4 TRAINABLE</text>
+  <rect x="635" y="164" width="230" height="24" rx="5" fill="#81C784" stroke="#2E7D32" stroke-width="1.5"/><text x="750" y="181" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 5 TRAINABLE</text>
+  <rect x="635" y="193" width="230" height="24" rx="5" fill="#81C784" stroke="#2E7D32" stroke-width="1.5"/><text x="750" y="210" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 6 TRAINABLE</text>
+  <rect x="635" y="222" width="230" height="24" rx="5" fill="#81C784" stroke="#2E7D32" stroke-width="1.5"/><text x="750" y="239" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 7 TRAINABLE</text>
+  <rect x="635" y="251" width="230" height="24" rx="5" fill="#81C784" stroke="#2E7D32" stroke-width="1.5"/><text x="750" y="268" text-anchor="middle" font-size="10" fill="white" font-family="Arial">Block 8 TRAINABLE</text>
+  <rect x="675" y="288" width="150" height="26" rx="5" fill="#FF8F00" stroke="#E65100" stroke-width="2"/><text x="750" y="306" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="Arial">MLP Head (2.2M)</text>
+</svg>

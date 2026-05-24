@@ -1,0 +1,15 @@
+{
+  "name": "sophon-slidev",
+  "description": "Transfer Learning Strategies for Jet Tagging at the LHC",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md --open",
+    "build": "slidev build slides.md --base /map/presentation/",
+    "export-pdf": "slidev export slides.md --format pdf --output sophon.pdf",
+    "export-pptx": "slidev export slides.md --format pptx --output sophon.pptx"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.49.0",
+    "@slidev/theme-default": "latest"
+  }
+}
