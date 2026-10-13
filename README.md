@@ -1,4 +1,4 @@
-# Optimizing an AI to Identify Particle Collisions
+# Teaching an AI to Identify Particle Collisions
 
 **Without Starting From Scratch**
 

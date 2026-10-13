@@ -1,6 +1,6 @@
 ---
 theme: default
-title: Optimizing an AI to Identify Particle Collisions
+title: Teaching an AI to Identify Particle Collisions
 info: Transfer Learning Strategies for Jet Tagging at the LHC
 transition: fade-out
 fonts:
