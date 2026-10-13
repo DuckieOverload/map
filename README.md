@@ -2,6 +2,8 @@
 
 **Without Starting From Scratch**
 
+**[Website](https://duckieoverload.github.io/map/)** &nbsp;·&nbsp; [Interactive slides](https://duckieoverload.github.io/map/presentation/) &nbsp;·&nbsp; [Poster (PDF)](https://duckieoverload.github.io/map/Sophon_TL.pdf) &nbsp;·&nbsp; [Lightning talk (PDF)](https://duckieoverload.github.io/map/Sophon_TL_Lightning_Talk_Slides.pdf) &nbsp;·&nbsp; [Code](https://github.com/DuckieOverload/transferlearningsophon)
+
 A joint research project by **Raunav Mendiratta** and **Emmet Muschenetz**, with mentorship from Ellison Scheuller and Jason Weitz, under the direction of [Dr. Javier Duarte](https://jduarte.physics.ucsd.edu/). Part of the UC San Diego [MAP](https://education.sdsc.edu/studenttech/map-home/) (Mentor Assistance Program) high school research mentorship program at the San Diego Supercomputer Center.
 
 ## About
@@ -25,3 +27,8 @@ https://duckieoverload.github.io/map/
 
 - [arXiv:2202.03772](https://arxiv.org/abs/2202.03772)
 - [arXiv:2405.12972](https://arxiv.org/abs/2405.12972)
+
+## More from Emmet
+
+- [Emmet's GitHub profile](https://github.com/DuckieOverload)
+- [Teaching Armor to Feel Its Own Damage](https://duckieoverload.github.io/vbr/): bio-inspired, self-sensing 3D-printed armor, VBR Research Camp 2026 ([repo](https://github.com/DuckieOverload/vbr))
