@@ -8,22 +8,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; overflow: hidden; }
     body {
       font-family: 'Source Sans Pro', sans-serif;
       background: #182B49;
       color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem;
     }
+    a { color: #C69214; }
     .top-bar {
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 8px;
       background: #C69214;
+    }
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 3rem 4.5rem;
     }
     .layout {
       display: flex;
@@ -115,12 +119,6 @@
       font-weight: 600;
       margin-top: auto;
     }
-    .footer {
-      position: absolute;
-      bottom: 1.5rem;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.35);
-    }
     .photo-col {
       width: 280px;
       flex-shrink: 0;
@@ -134,49 +132,226 @@
       object-fit: cover;
       display: block;
     }
+    .more {
+      position: absolute;
+      bottom: 1.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .more:hover { color: #C69214; }
+
+    /* ── about the program and the lab ─────────────────────────────── */
+    .about { background: #13233D; border-top: 1px solid rgba(255,255,255,0.08); }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 4.5rem 3rem; }
+    .wrap + .wrap { padding-top: 0; }
+    .label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C69214;
+      margin-bottom: 0.6rem;
+    }
+    h2 {
+      font-family: 'Merriweather', serif;
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+    }
+    h3 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+    .lede { color: rgba(255,255,255,0.7); line-height: 1.7; max-width: 760px; margin-bottom: 1rem; }
+    .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
+    .fact {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 1.2rem 1.1rem;
+    }
+    .fact .big { font-family: 'Merriweather', serif; font-size: 1.6rem; color: #C69214; margin-bottom: 0.3rem; }
+    .fact p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.45; }
+    .mentor { display: grid; grid-template-columns: 1fr 1.05fr; gap: 2.5rem; align-items: start; margin-top: 1.8rem; }
+    .mentor ul { list-style: none; margin-bottom: 1.4rem; }
+    .mentor li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.45rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .mentor li::before { content: '•'; position: absolute; left: 0; color: #C69214; }
+    .directions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .direction {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-left: 3px solid #C69214;
+      border-radius: 10px;
+      padding: 1rem 1rem 1.1rem 1.1rem;
+    }
+    .direction p { font-size: 0.85rem; color: rgba(255,255,255,0.62); line-height: 1.5; }
+    .direction.ours { background: rgba(198,146,20,0.14); border-color: rgba(198,146,20,0.45); border-left-color: #C69214; }
+    .direction .tag { display: inline-block; margin-top: 0.6rem; font-size: 0.7rem; font-weight: 600; color: #C69214; letter-spacing: 0.08em; text-transform: uppercase; }
+    .callout {
+      margin-top: 2rem;
+      background: rgba(198,146,20,0.14);
+      border-left: 3px solid #C69214;
+      border-radius: 0 10px 10px 0;
+      padding: 1rem 1.3rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    .links { margin-top: 1.4rem; font-size: 0.9rem; }
+    .links a { margin-right: 1.4rem; text-decoration: none; font-weight: 600; }
+    .links a:hover { text-decoration: underline; }
+
+    .footer {
+      text-align: center;
+      padding: 1.5rem 1.5rem 2rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      background: #13233D;
+    }
+
+    @media (max-width: 900px) {
+      .hero { padding: 3rem 1.25rem 4.5rem; }
+      .layout { flex-direction: column; align-items: center; }
+      .photo-col { width: min(100%, 360px); }
+      h1 { font-size: 2.1rem; }
+      .wrap { padding: 3.5rem 1.25rem; }
+      .facts { grid-template-columns: 1fr 1fr; }
+      .mentor { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    @media (max-width: 520px) {
+      .cards, .directions { grid-template-columns: 1fr; }
+      h2 { font-size: 1.6rem; }
+    }
   </style>
 </head>
 <body>
   <div class="top-bar"></div>
-  <div class="layout">
-    <div class="content">
-      <h1>Optimizing an AI to Identify Particle Collisions</h1>
-      <div class="subtitle">Without Starting From Scratch</div>
-      <p class="description">
-        Transfer learning strategies for jet tagging at the LHC with pretrained foundation models.
-        Part of the UC San Diego <a href="https://education.sdsc.edu/studenttech/map-home/" target="_blank" rel="noopener" style="color:#C69214;"><strong>MAP</strong></a> (Mentor Assistance Program) undergraduate research program
-        at the San Diego Supercomputer Center.
-      </p>
-      <p class="attribution">
-        A joint research project by <strong>Raunav Mendiratta</strong> &amp; <strong>Emmet Muschenetz</strong>,
-        with mentorship from Ellison Scheuller and Jason Weitz,
-        under the direction of <a href="https://jduarte.physics.ucsd.edu/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.8);"><strong>Dr. Javier Duarte</strong></a>.
-      </p>
-      <div class="cards">
-        <a class="card" href="Sophon_TL.pdf">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="4" width="32" height="40" rx="3" stroke="white" stroke-width="2"/><path d="M16 16h16M16 22h16M16 28h10" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <div class="card-title">Research Poster</div>
-          <div class="card-desc">Full poster with methodology, results, and analysis</div>
-          <div class="badge">PDF</div>
-        </a>
-        <a class="card" href="Sophon_TL_Lightning_Talk_Slides.pdf">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="24" rx="3" stroke="white" stroke-width="2"/><path d="M24 34v6M18 40h12" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M22 18l-4 8h6l-2 6 6-8h-6l2-6z" fill="#C69214"/></svg>
-          <div class="card-title">Lightning Talk</div>
-          <div class="card-desc">5-minute presentation slides (condensed)</div>
-          <div class="badge">PDF</div>
-        </a>
-        <a class="card" href="presentation/">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="24" rx="3" stroke="white" stroke-width="2"/><path d="M24 34v6M18 40h12" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M15 22l5 4-5 4M26 28h7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div class="card-title">Interactive Slides</div>
-          <div class="card-desc">Full presentation with animations and video</div>
-          <div class="badge">SLIDEV</div>
-        </a>
+  <header class="hero">
+    <div class="layout">
+      <div class="content">
+        <h1>Optimizing an AI to Identify Particle Collisions</h1>
+        <div class="subtitle">Without Starting From Scratch</div>
+        <p class="description">
+          Transfer learning strategies for jet tagging at the LHC with pretrained foundation models.
+          Part of the UC San Diego <a href="https://education.sdsc.edu/studenttech/map-home/" target="_blank" rel="noopener" style="color:#C69214;"><strong>MAP</strong></a> (Mentor Assistance Program) high school research mentorship program
+          at the San Diego Supercomputer Center.
+        </p>
+        <p class="attribution">
+          A joint research project by <strong>Raunav Mendiratta</strong> &amp; <strong>Emmet Muschenetz</strong>,
+          with mentorship from Ellison Scheuller and Jason Weitz,
+          under the direction of <a href="https://jduarte.physics.ucsd.edu/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.8);"><strong>Dr. Javier Duarte</strong></a>.
+        </p>
+        <div class="cards">
+          <a class="card" href="Sophon_TL.pdf">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="4" width="32" height="40" rx="3" stroke="white" stroke-width="2"/><path d="M16 16h16M16 22h16M16 28h10" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div class="card-title">Research Poster</div>
+            <div class="card-desc">Full poster with methodology, results, and analysis</div>
+            <div class="badge">PDF</div>
+          </a>
+          <a class="card" href="Sophon_TL_Lightning_Talk_Slides.pdf">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="24" rx="3" stroke="white" stroke-width="2"/><path d="M24 34v6M18 40h12" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M22 18l-4 8h6l-2 6 6-8h-6l2-6z" fill="#C69214"/></svg>
+            <div class="card-title">Lightning Talk</div>
+            <div class="card-desc">5-minute presentation slides (condensed)</div>
+            <div class="badge">PDF</div>
+          </a>
+          <a class="card" href="presentation/">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="24" rx="3" stroke="white" stroke-width="2"/><path d="M24 34v6M18 40h12" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M15 22l5 4-5 4M26 28h7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="card-title">Interactive Slides</div>
+            <div class="card-desc">Full presentation with animations and video</div>
+            <div class="badge">SLIDEV</div>
+          </a>
+        </div>
+      </div>
+      <div class="photo-col">
+        <img src="IMG_5884.jpg" alt="Photo">
       </div>
     </div>
-    <div class="photo-col">
-      <img src="IMG_5884.jpg" alt="Photo">
-    </div>
-  </div>
-  <div class="footer">UC San Diego &middot; San Diego Supercomputer Center &middot; References: <a href="https://arxiv.org/abs/2202.03772" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.35);">arXiv:2202.03772</a>, <a href="https://arxiv.org/abs/2405.12972" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.35);">arXiv:2405.12972</a></div>
+    <a class="more" href="#program">About MAP and the Duarte Lab &darr;</a>
+  </header>
+
+  <main class="about">
+    <section class="wrap" id="program">
+      <div class="label">UC San Diego &middot; San Diego Supercomputer Center</div>
+      <h2>The Mentor Assistance Program</h2>
+      <p class="lede">
+        MAP pairs San Diego County high school students in grades 10&ndash;12 with a UC San Diego faculty member or
+        postdoctoral researcher for an eight-month mentorship, from fall to spring. Run by the San Diego Supercomputer
+        Center and the UC San Diego School of Medicine, it reaches across the whole campus, from history and marine
+        physical sciences to nanoengineering, pharmacology and computer science.
+      </p>
+      <p class="lede">
+        Each student sets their own goals with their mentor: a research project, a science fair entry, regular visits
+        to the lab, or guided reading in a field they want to explore. The program ends with a final presentation.
+      </p>
+      <div class="facts">
+        <div class="fact"><div class="big">1 : 1</div><p>Mentorship with a UC San Diego faculty member or postdoc</p></div>
+        <div class="fact"><div class="big">8 months</div><p>From fall through spring</p></div>
+        <div class="fact"><div class="big">2&ndash;4 hrs</div><p>A week with the mentor, the recommended guideline</p></div>
+        <div class="fact"><div class="big">Grades 10&ndash;12</div><p>High school students from across San Diego County</p></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="mentor">
+      <div class="label">Meet our mentor</div>
+      <h2>Dr. Javier Duarte &amp; the Duarte Lab</h2>
+      <p class="lede">
+        Dr. Duarte is an Associate Professor of Physics at UC San Diego and a member of the CMS experiment at CERN's
+        Large Hadron Collider. His group develops new artificial intelligence techniques for high-energy particle
+        collisions, to measure the properties and interactions of elementary particles like the Higgs boson more
+        precisely and to search for new physics.
+      </p>
+      <div class="mentor">
+        <div>
+          <div class="label">Background</div>
+          <ul>
+            <li>Ph.D. in Physics, Caltech; B.S. in Physics and Mathematics, MIT</li>
+            <li>Lederman Postdoctoral Fellow at Fermilab</li>
+            <li>Co-PI of the NSF HDR Institute for Accelerated AI Algorithms for Data-Driven Discovery (A3D3)</li>
+          </ul>
+          <div class="label">Awards</div>
+          <ul>
+            <li>APS Henry Primakoff Award for Early-Career Particle Physics</li>
+            <li>Sloan Research Fellowship</li>
+            <li>RCSA Cottrell Scholar Award</li>
+            <li>DOE Early Career Award</li>
+          </ul>
+        </div>
+        <div>
+          <div class="label">The lab &middot; Particle physics and machine learning</div>
+          <div class="directions">
+            <div class="direction"><h3>LHC data analysis</h3><p>Measuring the Higgs boson and searching for exotic new physics</p></div>
+            <div class="direction"><h3>Hardware-accelerated ML</h3><p>Fast machine learning for the LHC's trigger systems and computing</p></div>
+            <div class="direction ours"><h3>Foundation models</h3><p>Large pretrained models for particle physics</p><span class="tag">Our project</span></div>
+            <div class="direction"><h3>Physics for everyone</h3><p>Diversity, inclusion and social justice in physics</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="callout">
+        <strong>Where our project comes from:</strong> the lab's work on foundation models for particle physics.
+        Instead of training a jet tagger from scratch, we adapted Sophon, a pretrained foundation model, to a
+        10-class jet tagging task, with day-to-day mentorship from Ellison Scheuller and Jason Weitz.
+      </p>
+      <p class="links">
+        <a href="https://jduarte.physics.ucsd.edu/" target="_blank" rel="noopener">Visit the Duarte Lab &rarr;</a>
+        <a href="https://education.sdsc.edu/studenttech/map-home/" target="_blank" rel="noopener">About MAP &rarr;</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">UC San Diego &middot; San Diego Supercomputer Center &middot; References: <a href="https://arxiv.org/abs/2202.03772" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.35);">arXiv:2202.03772</a>, <a href="https://arxiv.org/abs/2405.12972" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.35);">arXiv:2405.12972</a></footer>
 </body>
 </html>

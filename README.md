@@ -2,7 +2,7 @@
 
 **Without Starting From Scratch**
 
-A joint research project by **Raunav Mendiratta** and **Emmet Muschenetz**, with mentorship from Ellison Scheuller and Jason Weitz, under the direction of [Dr. Javier Duarte](https://jduarte.physics.ucsd.edu/). Part of the UC San Diego [MAP](https://education.sdsc.edu/studenttech/map-home/) (Mentor Assistance Program) undergraduate research program at the San Diego Supercomputer Center.
+A joint research project by **Raunav Mendiratta** and **Emmet Muschenetz**, with mentorship from Ellison Scheuller and Jason Weitz, under the direction of [Dr. Javier Duarte](https://jduarte.physics.ucsd.edu/). Part of the UC San Diego [MAP](https://education.sdsc.edu/studenttech/map-home/) (Mentor Assistance Program) high school research mentorship program at the San Diego Supercomputer Center.
 
 ## About
 
@@ -12,7 +12,7 @@ This project investigates transfer learning strategies for jet tagging at the La
 
 | File | Description |
 |------|-------------|
-| `index.html` | Project landing page |
+| `index.html` | Project landing page, with sections on the MAP program and Dr. Duarte's lab |
 | `Sophon_TL.pdf` | Full research poster |
 | `Sophon_TL_Lightning_Talk_Slides.pdf` | 5-minute lightning talk slides |
 | `presentation/` | Interactive Slidev presentation |
